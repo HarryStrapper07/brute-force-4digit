@@ -8,12 +8,12 @@ if len(sys.argv) != 2:
 
 target = sys.argv[1]
 
-# 1️⃣ Check: file exist?
+# 1️. Check: file exist?
 if not os.path.isfile(target):
     print("[-] File does not exist")
     sys.exit(1)
 
-# 2️⃣ Check: executable?
+# 2️. Check: executable?
 if not os.access(target, os.X_OK):
     print("[-] File is not executable (+x missing)")
     sys.exit(1)
@@ -49,3 +49,4 @@ for i in range(10000):
 
 else:
     print("\n[-] PIN not found")
+
